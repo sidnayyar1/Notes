@@ -11,15 +11,20 @@ import CoreData
 
 class noteTableViewController: UITableViewController {
 
-    var note = [Note]()
+    var notes = [Note]()
     
     var manageObjectContext:NSManagedObjectContext?{
         return (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tableView.backgroundColor = UIColor(red: 245.0/255.0, green: 79.0/255.0, blue: 80.0/255.0, alpha: 1.0)
   
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        retrieveNotes; // this wil retrive notes from our data model
     }
 
     // MARK: - Table view data source
@@ -31,15 +36,16 @@ class noteTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       
-        return 0
+        return notes.count// this is will notes count of notes.
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "notesTableViewCell", for: indexPath)
+//identifier will change to tableviewcell of main story board cell.
+        let note: Note = notes[indexPath.row]//make a variable if index path will be 5 it will take you to 5th row
+        cell.configureCell(note: note)
+        cell.backgroundColor = UIColor.clear
         return cell
     }
     
@@ -56,9 +62,8 @@ class noteTableViewController: UITableViewController {
         if editingStyle == .delete {
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-           
-        }    
+        }
+        tableView.reloadData()// this will reload data whenever we change the data 
     }
   
 }
