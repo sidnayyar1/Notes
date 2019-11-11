@@ -63,7 +63,67 @@ class noteTableViewController: UITableViewController {
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
-        tableView.reloadData()// this will reload data whenever we change the data 
+        tableView.reloadData()// this will reload data whenever we change the data
     }
+    
+    func retrieveNotes() {
+        manageObjectContext?.perform {
+            
+            self.fetchNotesFromCoreData { (notes) in
+                if let notes = notes {
+                    self.notes = notes
+                    self.tableView.reloadData()
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+    
+//    func retrieveNotes() {//this function is caled to retrieve notes from the core data
+//        manageObjectContext?.perform {
+//            self.fetchNotesfromCoreData { ([notes]) in
+//
+//                if let notes = notes {
+//                self.notes = notes
+//                    self.tableView.reloadData()
+//                }
+//            }
+//        }
+//    }
+    
+    func fetchNotesFromCoreData(completion: @escaping ([Note]?)->Void){
+        manageObjectContext?.perform {
+            var notes = [Note]()
+            let request: NSFetchRequest<Note> = Note.fetchRequest()
+            
+            do {
+                notes = try  self.manageObjectContext!.fetch(request)
+                completion(notes)
+                
+            }
+            
+            catch {
+                print("Could not fetch notes from CoreData:\(error.localizedDescription)")
+                
+            }
+            
+        }
+        
+    }
+    
+    
+//    func fetchNotesfromCoreData(completion: @escaping ([Note])?) -> Void) {
+//
+//    managedObjectConext?.perform {
+//
+//    var notes = [Note]()
+//    let request = NSFetchRequest<Note> = Note.fetchRequest()
+//    }
+//
+//    }
   
 }
