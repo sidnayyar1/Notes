@@ -10,9 +10,14 @@ import UIKit
 
 class noteTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var noteNameLabel: UILabel!
+    @IBOutlet weak var shadowView: UIView!
+    @IBOutlet weak var DescriptionLabel: UILabel!
+    @IBOutlet weak var noteImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+      
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

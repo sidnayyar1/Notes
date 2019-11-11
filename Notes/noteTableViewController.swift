@@ -41,7 +41,7 @@ class noteTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "notesTableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "noteTableViewCell", for: indexPath)
 //identifier will change to tableviewcell of main story board cell.
         let note: Note = notes[indexPath.row]//make a variable if index path will be 5 it will take you to 5th row
         cell.configureCell(note: note)
