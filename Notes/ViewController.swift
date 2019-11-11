@@ -10,6 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+
+    @IBOutlet weak var noteInfoView: UIView!
+    @IBOutlet weak var noteImageView: UIView!
+    
+    
+    @IBOutlet weak var noteNameLabel: UITextField!
+    @IBOutlet weak var noteDescriptionLabel: UITextView!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

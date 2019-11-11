@@ -24,7 +24,7 @@ class noteTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        retrieveNotes; // this wil retrive notes from our data model
+        retrieveNotes// this wil retrive notes from our data model
     }
 
     // MARK: - Table view data source
