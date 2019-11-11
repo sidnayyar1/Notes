@@ -33,6 +33,9 @@ class noteTableViewCell: UITableViewCell {
     }
     func configureCell(note: Note){
         self.noteNameLabel.text = note.noteName?.uppercased()//upper case is not necessory but looks good as title is always in uppercase
+        self.DescriptionLabel.text = note.noteDescription
+        
+        self.noteImage.image = UIImage(data: note.noteImage! as Data)
     }
     
 
