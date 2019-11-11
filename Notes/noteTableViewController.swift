@@ -24,7 +24,7 @@ class noteTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        retrieveNotes// this wil retrive notes from our data model
+        retrieveNotes()// this wil retrive notes from our data model
     }
 
     // MARK: - Table view data source
@@ -41,7 +41,7 @@ class noteTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "noteTableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "noteTableViewCell", for: indexPath) as! noteTableViewCell
 //identifier will change to tableviewcell of main story board cell.
         let note: Note = notes[indexPath.row]//make a variable if index path will be 5 it will take you to 5th row
         cell.configureCell(note: note)

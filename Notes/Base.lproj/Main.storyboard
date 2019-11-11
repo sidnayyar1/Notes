@@ -165,7 +165,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Note Description" id="8js-9d-M1U">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Lhp-2A-GLI"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="PVl-kC-FVm"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="PVl-kC-FVm">
+                            <connections>
+                                <action selector="saveButtonWasPressed:" destination="3U0-1q-Zwh" id="nco-H8-4OO"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="noteDescriptionLabel" destination="b8v-FO-7yU" id="f33-5v-wRL"/>
@@ -175,7 +179,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9xS-cP-KpS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Ivg-Ia-EQ8"/>
+                <tapGestureRecognizer id="Ivg-Ia-EQ8">
+                    <connections>
+                        <action selector="pickImageButton:" destination="3U0-1q-Zwh" id="GeA-pj-dc4"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1892.753623188406" y="56.919642857142854"/>
         </scene>
