@@ -164,7 +164,11 @@
                         <viewLayoutGuide key="safeArea" id="Xsp-vw-LI1"/>
                     </view>
                     <navigationItem key="navigationItem" title="Note Description" id="8js-9d-M1U">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Lhp-2A-GLI"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Lhp-2A-GLI">
+                            <connections>
+                                <action selector="cancel:" destination="3U0-1q-Zwh" id="g6F-YP-yLA"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="PVl-kC-FVm">
                             <connections>
                                 <action selector="saveButtonWasPressed:" destination="3U0-1q-Zwh" id="nco-H8-4OO"/>

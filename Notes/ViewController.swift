@@ -240,8 +240,51 @@ class ViewController: UIViewController,UITextFieldDelegate,UINavigationControlle
     
     
     
+    //cancel button
     
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        
+          let isPresentingInAddFluidPatientMode = presentingViewController is UINavigationController
+                
+                if isPresentingInAddFluidPatientMode {
+                    dismiss(animated: true, completion: nil)
+                    
+                }
+                
+                else {
+                    navigationController!.popViewController(animated: true)
+                    
+                }
+                
+            }
     
+            
+            // Text field
+            func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+                textField.resignFirstResponder()
+                return false
+                
+            }
+            
+            func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+                if(text == "\n") {
+                    textView.resignFirstResponder()
+                    return false
+                    
+                }
+                
+                return true
+                
+            }
+            
+            func textViewDidBeginEditing(_ textView: UITextView) {
+                if (textView.text == "Note Description...") {
+                    textView.text = ""
+                    
+                }
+                
+            }
+            
 
 }
 
