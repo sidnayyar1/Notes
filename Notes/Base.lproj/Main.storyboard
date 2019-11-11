@@ -169,7 +169,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="noteDescriptionLabel" destination="b8v-FO-7yU" id="f33-5v-wRL"/>
-                        <outlet property="noteImageView" destination="Bz5-5e-fUh" id="jIA-IG-28D"/>
+                        <outlet property="noteImageView" destination="h5R-IY-Ttg" id="5HL-5z-bU6"/>
                         <outlet property="noteInfoView" destination="qTL-kB-cNE" id="KIS-zY-3xM"/>
                         <outlet property="noteNameLabel" destination="IsG-XP-fYB" id="pT2-Io-W1w"/>
                     </connections>
