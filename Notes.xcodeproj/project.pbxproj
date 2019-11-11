@@ -14,6 +14,7 @@
 		017A34BC2378CC6900CE3981 /* Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 017A34BA2378CC6900CE3981 /* Notes.xcdatamodeld */; };
 		017A34BE2378CC6D00CE3981 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 017A34BD2378CC6D00CE3981 /* Assets.xcassets */; };
 		017A34C12378CC6D00CE3981 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 017A34BF2378CC6D00CE3981 /* LaunchScreen.storyboard */; };
+		017A34C92378E38900CE3981 /* noteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A34C82378E38900CE3981 /* noteTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		017A34BD2378CC6D00CE3981 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		017A34C02378CC6D00CE3981 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		017A34C22378CC6D00CE3981 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		017A34C82378E38900CE3981 /* noteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noteTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				017A34B12378CC6900CE3981 /* AppDelegate.swift */,
 				017A34B32378CC6900CE3981 /* SceneDelegate.swift */,
+				017A34C82378E38900CE3981 /* noteTableViewController.swift */,
 				017A34B52378CC6900CE3981 /* ViewController.swift */,
 				017A34B72378CC6900CE3981 /* Main.storyboard */,
 				017A34BD2378CC6D00CE3981 /* Assets.xcassets */,
@@ -143,6 +146,7 @@
 			files = (
 				017A34B62378CC6900CE3981 /* ViewController.swift in Sources */,
 				017A34B22378CC6900CE3981 /* AppDelegate.swift in Sources */,
+				017A34C92378E38900CE3981 /* noteTableViewController.swift in Sources */,
 				017A34B42378CC6900CE3981 /* SceneDelegate.swift in Sources */,
 				017A34BC2378CC6900CE3981 /* Notes.xcdatamodeld in Sources */,
 			);
